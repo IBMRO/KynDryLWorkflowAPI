@@ -27,16 +27,16 @@ public class WorkflowController {
 	public String getVersion(@PathVariable("reqId") String reqId) {
 
 		Map<String, WorkflowController> map = new HashMap();
-		//List<HashMap> myL = new ArrayList<HashMap>();
+		List<HashMap> myL = new ArrayList<HashMap>();
 		StringBuffer memoryDetails = new StringBuffer();
 		try {
 			System.out.println("Processing reqId: " + reqId);
 
 			HashMap h2 = null;
-			for (int i = 1; i <= 100000; i++) {
-				//h2 = new HashMap<String, WorkflowController>();
-				//h2.put(reqId + new Random().nextInt(), new WorkflowController());
-				//myL.add(h2);
+			for (int i = 1; i <= 10000; i++) {
+				h2 = new HashMap<String, WorkflowController>();
+				h2.put(reqId + new Random().nextInt(), new WorkflowController());
+				myL.add(h2);
 				map.put(reqId + new Random().nextInt(), new WorkflowController());
 			}
 
