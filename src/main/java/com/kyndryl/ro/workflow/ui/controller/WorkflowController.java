@@ -33,7 +33,7 @@ public class WorkflowController {
 			System.out.println("Processing reqId: " + reqId);
 
 			HashMap h2 = null;
-			for (int i = 1; i <= 30000; i++) {
+			for (int i = 1; i <= 1000; i++) {
 				h2 = new HashMap<String, WorkflowController>();
 				h2.put(reqId + new Random().nextInt(), new WorkflowController());
 				myL.add(h2);
